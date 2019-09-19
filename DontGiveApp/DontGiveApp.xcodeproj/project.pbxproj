@@ -15,6 +15,7 @@
 		AE0FEE5D2333B497000DFAA0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE0FEE5B2333B497000DFAA0 /* LaunchScreen.storyboard */; };
 		AE0FEE682333B497000DFAA0 /* DontGiveAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0FEE672333B497000DFAA0 /* DontGiveAppTests.swift */; };
 		AE0FEE732333B497000DFAA0 /* DontGiveAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0FEE722333B497000DFAA0 /* DontGiveAppUITests.swift */; };
+		AED835DA2333C3C300A92E66 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AED835D92333C3C300A92E66 /* HealthKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,8 @@
 		AE0FEE6E2333B497000DFAA0 /* DontGiveAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DontGiveAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE0FEE722333B497000DFAA0 /* DontGiveAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DontGiveAppUITests.swift; sourceTree = "<group>"; };
 		AE0FEE742333B497000DFAA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AED835D72333C3C300A92E66 /* DontGiveApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DontGiveApp.entitlements; sourceTree = "<group>"; };
+		AED835D92333C3C300A92E66 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AED835DA2333C3C300A92E66 /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +87,7 @@
 				AE0FEE662333B497000DFAA0 /* DontGiveAppTests */,
 				AE0FEE712333B497000DFAA0 /* DontGiveAppUITests */,
 				AE0FEE4D2333B496000DFAA0 /* Products */,
+				AED835D82333C3C300A92E66 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,6 +104,7 @@
 		AE0FEE4E2333B496000DFAA0 /* DontGiveApp */ = {
 			isa = PBXGroup;
 			children = (
+				AED835D72333C3C300A92E66 /* DontGiveApp.entitlements */,
 				AE0FEE4F2333B496000DFAA0 /* AppDelegate.swift */,
 				AE0FEE512333B496000DFAA0 /* ViewController.swift */,
 				AE0FEE532333B496000DFAA0 /* Main.storyboard */,
@@ -126,6 +132,14 @@
 				AE0FEE742333B497000DFAA0 /* Info.plist */,
 			);
 			path = DontGiveAppUITests;
+			sourceTree = "<group>";
+		};
+		AED835D82333C3C300A92E66 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AED835D92333C3C300A92E66 /* HealthKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -196,6 +210,11 @@
 				TargetAttributes = {
 					AE0FEE4B2333B496000DFAA0 = {
 						CreatedOnToolsVersion = 10.3;
+						SystemCapabilities = {
+							com.apple.HealthKit = {
+								enabled = 1;
+							};
+						};
 					};
 					AE0FEE622333B497000DFAA0 = {
 						CreatedOnToolsVersion = 10.3;
@@ -436,7 +455,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = DontGiveApp/DontGiveApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4ZZ8344Y55;
 				INFOPLIST_FILE = DontGiveApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -453,7 +474,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = DontGiveApp/DontGiveApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4ZZ8344Y55;
 				INFOPLIST_FILE = DontGiveApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
