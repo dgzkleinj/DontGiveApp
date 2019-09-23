@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AA044B7A2338EDD300E708C4 /* Journal.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA044B792338EDD300E708C4 /* Journal.swift */; };
 		AE0FEE502333B496000DFAA0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0FEE4F2333B496000DFAA0 /* AppDelegate.swift */; };
 		AE0FEE522333B496000DFAA0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0FEE512333B496000DFAA0 /* ViewController.swift */; };
 		AE0FEE552333B496000DFAA0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE0FEE532333B496000DFAA0 /* Main.storyboard */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AA044B792338EDD300E708C4 /* Journal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Journal.swift; sourceTree = "<group>"; };
 		AE0FEE4C2333B496000DFAA0 /* DontGiveApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DontGiveApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE0FEE4F2333B496000DFAA0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AE0FEE512333B496000DFAA0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -80,6 +82,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AA044B762338ECF600E708C4 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				AE0FEE512333B496000DFAA0 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		AA044B772338ED3200E708C4 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				AE0FEE4F2333B496000DFAA0 /* AppDelegate.swift */,
+				AE0FEE5E2333B497000DFAA0 /* Info.plist */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		AA044B782338ED4D00E708C4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AA044B792338EDD300E708C4 /* Journal.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		AE0FEE432333B496000DFAA0 = {
 			isa = PBXGroup;
 			children = (
@@ -104,13 +131,13 @@
 		AE0FEE4E2333B496000DFAA0 /* DontGiveApp */ = {
 			isa = PBXGroup;
 			children = (
+				AA044B782338ED4D00E708C4 /* Model */,
 				AED835D72333C3C300A92E66 /* DontGiveApp.entitlements */,
-				AE0FEE4F2333B496000DFAA0 /* AppDelegate.swift */,
-				AE0FEE512333B496000DFAA0 /* ViewController.swift */,
+				AA044B772338ED3200E708C4 /* Support */,
+				AA044B762338ECF600E708C4 /* Controller */,
 				AE0FEE532333B496000DFAA0 /* Main.storyboard */,
 				AE0FEE592333B497000DFAA0 /* Assets.xcassets */,
 				AE0FEE5B2333B497000DFAA0 /* LaunchScreen.storyboard */,
-				AE0FEE5E2333B497000DFAA0 /* Info.plist */,
 				AE0FEE562333B496000DFAA0 /* DontGiveApp.xcdatamodeld */,
 			);
 			path = DontGiveApp;
@@ -281,6 +308,7 @@
 				AE0FEE582333B496000DFAA0 /* DontGiveApp.xcdatamodeld in Sources */,
 				AE0FEE522333B496000DFAA0 /* ViewController.swift in Sources */,
 				AE0FEE502333B496000DFAA0 /* AppDelegate.swift in Sources */,
+				AA044B7A2338EDD300E708C4 /* Journal.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -458,7 +486,7 @@
 				CODE_SIGN_ENTITLEMENTS = DontGiveApp/DontGiveApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4ZZ8344Y55;
-				INFOPLIST_FILE = DontGiveApp/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/DontGiveApp/Support/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -477,7 +505,7 @@
 				CODE_SIGN_ENTITLEMENTS = DontGiveApp/DontGiveApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4ZZ8344Y55;
-				INFOPLIST_FILE = DontGiveApp/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/DontGiveApp/Support/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
