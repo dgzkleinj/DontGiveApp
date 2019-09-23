@@ -7,3 +7,13 @@
 //
 
 import Foundation
+
+
+struct Journal {
+    var data: Date!
+    var humor: String
+    var feelings: String
+    var journal: String
+}
+
+
