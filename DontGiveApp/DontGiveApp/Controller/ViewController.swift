@@ -17,15 +17,15 @@ class ViewController: UIViewController {
     }
 
     @IBAction func sadAction(_ sender: UIButton) {
-        performSegue(withIdentifier: "sadSegue", sender: nil)
+        performSegue(withIdentifier: "feelingsSegue", sender: "sad")
     }
     
     @IBAction func neutralAction(_ sender: UIButton) {
-        performSegue(withIdentifier: "neutralSegue", sender: nil)
+        performSegue(withIdentifier: "feelingsSegue", sender: "neutral")
     }
     
     @IBAction func happyAction(_ sender: UIButton) {
-        performSegue(withIdentifier: "happySegue", sender: nil)
+        performSegue(withIdentifier: "feelingsSegue", sender: "happy")
     }
 }
 
