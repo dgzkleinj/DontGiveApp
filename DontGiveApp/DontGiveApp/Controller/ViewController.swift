@@ -14,17 +14,18 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        view.backgroundColor = UIColor.red
     }
 
     @IBAction func sadAction(_ sender: UIButton) {
+        performSegue(withIdentifier: "sadSegue", sender: nil)
     }
     
     @IBAction func neutralAction(_ sender: UIButton) {
+        performSegue(withIdentifier: "neutralSegue", sender: nil)
     }
     
     @IBAction func happyAction(_ sender: UIButton) {
+        performSegue(withIdentifier: "happySegue", sender: nil)
     }
 }
 
