@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    //teste
+    @IBOutlet weak var helloNameLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,6 +18,13 @@ class ViewController: UIViewController {
         view.backgroundColor = UIColor.red
     }
 
-
+    @IBAction func sadAction(_ sender: UIButton) {
+    }
+    
+    @IBAction func neutralAction(_ sender: UIButton) {
+    }
+    
+    @IBAction func happyAction(_ sender: UIButton) {
+    }
 }
 
