@@ -16,6 +16,8 @@ struct Journal {
     var journalText: String
 }
 
+var journals: [Journal] = []
+
 let happyEmotions = ["Hopeful", "Joyful", "Satisfied", "Confident", "Excited", "Relieved"]
 let neutralEmotions = ["Relieved", "Satisfied", "Apathic", "Detached", "Mellow"]
 let sadEmotions = ["Afraid", "Angry", "Lonely", "Depressed", "Melancholic", "Stressed", "Guilt"]

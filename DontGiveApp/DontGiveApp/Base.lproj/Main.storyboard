@@ -149,6 +149,14 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Brm-lU-7ep">
+                                <rect key="frame" x="186" y="574" width="42" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Enviar"/>
+                                <connections>
+                                    <action selector="sendJournalAction:" destination="rEP-lw-jRa" eventType="touchUpInside" id="Ijd-Qs-yuS"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -163,6 +171,8 @@
                     </view>
                     <connections>
                         <outlet property="emotionCollectionView" destination="v7c-l2-vsB" id="eCq-qO-vlz"/>
+                        <outlet property="journalTextField" destination="ffM-fa-JCL" id="ZFC-Mb-awC"/>
+                        <outlet property="sendButton" destination="Brm-lU-7ep" id="KoM-XK-BWa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QfJ-P1-UvT" userLabel="First Responder" sceneMemberID="firstResponder"/>
