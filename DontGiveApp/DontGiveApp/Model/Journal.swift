@@ -10,10 +10,12 @@ import Foundation
 
 
 struct Journal {
-    var data: Date!
-    var humor: String
-    var feelings: String
-    var journal: String
+    var date: Date!
+    var feeling: String
+    var emotions: [String]
+    var journalText: String
 }
 
-
+let happyEmotions = ["Hopeful", "Joyful", "Satisfied", "Confident", "Excited", "Relieved"]
+let neutralEmotions = ["Relieved", "Satisfied", "Apathic", "Detached", "Mellow"]
+let sadEmotions = ["Afraid", "Angry", "Lonely", "Depressed", "Melancholic", "Stressed", "Guilt"]

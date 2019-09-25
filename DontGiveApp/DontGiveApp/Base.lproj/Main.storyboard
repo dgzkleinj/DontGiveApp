@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Qt0-CF-nMi">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6Le-dg-aQz">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -106,27 +106,68 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ffM-fa-JCL">
-                                <rect key="frame" x="10" y="422" width="394" height="400"/>
+                                <rect key="frame" x="10" y="398" width="394" height="150"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="400" id="XeN-VS-EOa"/>
+                                    <constraint firstAttribute="height" constant="150" id="OQQ-Pe-iNv"/>
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="v7c-l2-vsB">
+                                <rect key="frame" x="0.0" y="88" width="414" height="300"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="sdz-JP-M5j"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="D1g-Qo-csX">
+                                    <size key="itemSize" width="147" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="emotionCell" id="bxY-yV-m1H" customClass="EmotionCollectionViewCell" customModule="DontGiveApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="147" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="147" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QmC-2v-4os">
+                                                    <rect key="frame" x="20" y="15" width="107" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <connections>
+                                            <outlet property="emotionNameLabel" destination="QmC-2v-4os" id="kkh-k7-KxZ"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="ffM-fa-JCL" firstAttribute="leading" secondItem="SH4-le-Dg3" secondAttribute="leading" constant="10" id="9dx-55-vqY"/>
+                            <constraint firstItem="v7c-l2-vsB" firstAttribute="top" secondItem="SH4-le-Dg3" secondAttribute="top" id="KRx-ao-1CA"/>
+                            <constraint firstItem="ffM-fa-JCL" firstAttribute="top" secondItem="v7c-l2-vsB" secondAttribute="bottom" constant="10" id="UJ1-9T-OPB"/>
                             <constraint firstItem="SH4-le-Dg3" firstAttribute="trailing" secondItem="ffM-fa-JCL" secondAttribute="trailing" constant="10" id="WJl-j7-Ku2"/>
-                            <constraint firstItem="SH4-le-Dg3" firstAttribute="bottom" secondItem="ffM-fa-JCL" secondAttribute="bottom" constant="40" id="rda-hW-M6z"/>
+                            <constraint firstItem="v7c-l2-vsB" firstAttribute="leading" secondItem="SH4-le-Dg3" secondAttribute="leading" id="dPh-Ad-9Nv"/>
+                            <constraint firstItem="SH4-le-Dg3" firstAttribute="trailing" secondItem="v7c-l2-vsB" secondAttribute="trailing" id="hOV-GL-u6j"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="SH4-le-Dg3"/>
                     </view>
+                    <connections>
+                        <outlet property="emotionCollectionView" destination="v7c-l2-vsB" id="eCq-qO-vlz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QfJ-P1-UvT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1957" y="145"/>
+            <point key="canvasLocation" x="1956.521739130435" y="144.64285714285714"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="OUP-Yr-2VD">
