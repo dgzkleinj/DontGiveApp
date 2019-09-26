@@ -27,5 +27,12 @@ class ViewController: UIViewController {
     @IBAction func happyAction(_ sender: UIButton) {
         performSegue(withIdentifier: "feelingsSegue", sender: "happy")
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let nextVC = segue.destination as? EmotionsViewController
+        let feeling = sender as? String
+        
+        nextVC?.selectedFeeling = feeling
+    }
 }
 
