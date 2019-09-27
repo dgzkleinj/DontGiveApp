@@ -25,11 +25,8 @@ class LoginViewController: UIViewController {
         UserDefaults.standard.set(true, forKey: "status")
         Switcher.updateRootVC()
         
-    }
-    
-    @IBAction func signUpAction(_ sender: UIButton) {
         let defaults = UserDefaults.standard
-        let name = nameTextField.text ?? ""
+        let name = nameTextField.text
         defaults.set(name, forKey: "nameKey")
     }
     
