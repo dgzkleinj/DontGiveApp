@@ -193,7 +193,9 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Brm-lU-7ep">
                                 <rect key="frame" x="150" y="700" width="114" height="30"/>
-                                <state key="normal" title="Enviar"/>
+                                <state key="normal" title="Enviar">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
                                 <connections>
                                     <action selector="sendJournalAction:" destination="rEP-lw-jRa" eventType="touchUpInside" id="Ijd-Qs-yuS"/>
                                 </connections>
@@ -235,11 +237,11 @@
             </objects>
             <point key="canvasLocation" x="2900" y="144.64285714285714"/>
         </scene>
-        <!--Item-->
+        <!--Feeling-->
         <scene sceneID="OUP-Yr-2VD">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6Le-dg-aQz" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="riR-VK-PJs"/>
+                    <tabBarItem key="tabBarItem" title="Feeling" image="thoughts" id="riR-VK-PJs"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="AEt-NX-Z65">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -265,6 +267,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="6Le-dg-aQz" kind="relationship" relationship="viewControllers" id="R2u-cH-TPT"/>
+                        <segue destination="lAk-6c-0Yd" kind="relationship" relationship="viewControllers" id="54K-GK-Jo0"/>
                         <segue destination="San-R0-BEn" kind="relationship" relationship="viewControllers" id="umK-Q7-0Zi"/>
                     </connections>
                 </tabBarController>
@@ -298,13 +301,29 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c29-Ed-7w7" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="hEu-ML-w4A" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1977" y="931"/>
+            <point key="canvasLocation" x="1977" y="1679"/>
         </scene>
-        <!--Item-->
+        <!--View Controller-->
+        <scene sceneID="6Bk-mK-26u">
+            <objects>
+                <viewController id="fXZ-63-A74" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="91t-pk-cCH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="IHV-8r-PB0"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="WXo-Ly-5YL"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zgv-ck-0GE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1977" y="916"/>
+        </scene>
+        <!--Profile-->
         <scene sceneID="0O2-yg-Z77">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="San-R0-BEn" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="nH7-QV-oNl"/>
+                    <tabBarItem key="tabBarItem" title="Profile" image="profile-icon-3" largeContentSizeImage="profile-icon-1" id="nH7-QV-oNl"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="7dD-X5-kD7">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -317,13 +336,36 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zEZ-Rj-5CA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="996" y="931"/>
+            <point key="canvasLocation" x="996" y="1679"/>
+        </scene>
+        <!--Calendar-->
+        <scene sceneID="zLW-VM-fhT">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="lAk-6c-0Yd" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Calendar" image="calendar" id="YFn-jE-KHx"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="P8l-xK-yNJ">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="fXZ-63-A74" kind="relationship" relationship="rootViewController" id="Bkd-bB-HLa"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rML-uc-2uz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="996" y="916"/>
         </scene>
     </scenes>
     <resources>
+        <image name="calendar" width="32" height="32"/>
         <image name="gold-ribbon-awareness-ribbon-alice-frenz-300" width="150" height="179"/>
         <image name="laughing-face" width="128" height="128"/>
         <image name="neutral-face" width="128" height="128"/>
+        <image name="profile-icon-1" width="128" height="128"/>
+        <image name="profile-icon-3" width="32" height="32"/>
         <image name="sad-face" width="128" height="128"/>
+        <image name="thoughts" width="32" height="32"/>
     </resources>
 </document>

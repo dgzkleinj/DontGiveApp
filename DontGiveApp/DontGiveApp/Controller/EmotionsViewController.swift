@@ -23,18 +23,25 @@ class EmotionsViewController: UIViewController {
         
         emotionCollectionView.delegate = self
         emotionCollectionView.dataSource = self
-        sendButton.layer.borderWidth = 2
-        sendButton.layer.borderColor = Colors.beekeper.cgColor
+        
+        sendButton.layer.borderWidth = 1
         sendButton.layer.cornerRadius = sendButton.frame.height / 2
+        
+        journalTextView.layer.borderWidth = 1
+        journalTextView.layer.cornerRadius = 15
+
         
         if selectedFeeling == "sad" {
             view.backgroundColor = Colors.middleBlue
+            sendButton.backgroundColor = Colors.hintOfIcePack
             emotions = sadEmotions
         }else if selectedFeeling == "neutral" {
             view.backgroundColor = Colors.juneBud
+            sendButton.backgroundColor = Colors.greenlandGreen
             emotions = neutralEmotions
         }else {
             view.backgroundColor = Colors.pinkGlamour
+            sendButton.backgroundColor = Colors.turbo
             emotions = happyEmotions
         }
         

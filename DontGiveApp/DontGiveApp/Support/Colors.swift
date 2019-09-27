@@ -87,6 +87,17 @@ enum Colors {
         return color
     }
     
+    static var wizardGrey: UIColor {
+        let hexColor = "535c68"
+        guard let color =  UIColor(fromHexCode: hexColor) else { fatalError("Should return a color of \(hexColor)") }
+        return color
+    }
+    static var soaringEagle: UIColor {
+        let hexColor = "95afc0"
+        guard let color =  UIColor(fromHexCode: hexColor) else { fatalError("Should return a color of \(hexColor)") }
+        return color
+    }
+    
     static var black: UIColor {
         let hexColor = "000000"
         guard let color =  UIColor(fromHexCode: hexColor) else { fatalError("Should return a color of \(hexColor)") }

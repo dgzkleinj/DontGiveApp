@@ -22,6 +22,7 @@ class ViewController: UIViewController {
             userName = value
         }
         helloNameLabel.text = "Olá, \(userName ?? "Forasteiro")"
+        
     }
 
     @IBAction func sadAction(_ sender: UIButton) {
