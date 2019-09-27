@@ -11,7 +11,7 @@ import UIKit
 class EmotionsViewController: UIViewController {
 
     @IBOutlet weak var emotionCollectionView: UICollectionView!
-    @IBOutlet weak var journalTextField: UITextField!
+    @IBOutlet weak var journalTextView: UITextView!
     @IBOutlet weak var sendButton: UIButton!
     
     var selectedFeeling: String?
@@ -28,10 +28,13 @@ class EmotionsViewController: UIViewController {
         sendButton.layer.cornerRadius = sendButton.frame.height / 2
         
         if selectedFeeling == "sad" {
+            view.backgroundColor = Colors.middleBlue
             emotions = sadEmotions
         }else if selectedFeeling == "neutral" {
+            view.backgroundColor = Colors.juneBud
             emotions = neutralEmotions
         }else {
+            view.backgroundColor = Colors.pinkGlamour
             emotions = happyEmotions
         }
         
@@ -39,7 +42,7 @@ class EmotionsViewController: UIViewController {
     
     //Botao cria uma journal e coloca no array journals
     @IBAction func sendJournalAction(_ sender: UIButton) {
-        let journal = Journal(date: Date(), feeling: selectedFeeling!, emotions: selectedEmotions, journalText: journalTextField.text!)
+        let journal = Journal(date: Date(), feeling: selectedFeeling!, emotions: selectedEmotions, journalText: journalTextView.text!)
         journals.append(journal)
         print(journal)
     }
@@ -56,7 +59,7 @@ extension EmotionsViewController : UICollectionViewDelegate, UICollectionViewDat
         let emotion = emotions[indexPath.row]
         cell.emotionNameLabel.text = emotion
         if selectedFeeling == "sad" {
-            cell.backgroundColor = Colors.blurple
+            cell.backgroundColor = Colors.hintOfIcePack
         }else if selectedFeeling == "neutral" {
             cell.backgroundColor = Colors.greenlandGreen
         }else {
@@ -72,7 +75,7 @@ extension EmotionsViewController : UICollectionViewDelegate, UICollectionViewDat
         if (!selectedEmotions.contains(emotion)) {
             selectedEmotions.append(emotion)
             if selectedFeeling == "sad" {
-                cell?.backgroundColor = Colors.exodusFruit
+                cell?.backgroundColor = Colors.coastalBreeze
             }else if selectedFeeling == "neutral" {
                 cell?.backgroundColor = Colors.middleBlue
             }else {
@@ -82,7 +85,7 @@ extension EmotionsViewController : UICollectionViewDelegate, UICollectionViewDat
             if let index = selectedEmotions.firstIndex(of: emotion) {
                 selectedEmotions.remove(at: index)
                 if selectedFeeling == "sad" {
-                    cell?.backgroundColor = Colors.blurple
+                    cell?.backgroundColor = Colors.hintOfIcePack
                 }else if selectedFeeling == "neutral" {
                     cell?.backgroundColor = Colors.greenlandGreen
                 }else {

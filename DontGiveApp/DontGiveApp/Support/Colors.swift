@@ -43,6 +43,50 @@ enum Colors {
         return color
     }
     
+    static var carminePink: UIColor {
+        let hexColor = "eb4d4b"
+        guard let color =  UIColor(fromHexCode: hexColor) else { fatalError("Should return a color of \(hexColor)") }
+        return color
+    }
+    static var pinkGlamour: UIColor {
+        let hexColor = "ff7979"
+        guard let color =  UIColor(fromHexCode: hexColor) else { fatalError("Should return a color of \(hexColor)") }
+        return color
+    }
+    
+    static var hintOfIcePack: UIColor {
+        let hexColor = "c7ecee"
+        guard let color =  UIColor(fromHexCode: hexColor) else { fatalError("Should return a color of \(hexColor)") }
+        return color
+    }
+    static var coastalBreeze: UIColor {
+        let hexColor = "dff9fb"
+        guard let color =  UIColor(fromHexCode: hexColor) else { fatalError("Should return a color of \(hexColor)") }
+        return color
+    }
+    
+    static var quinceJelly: UIColor {
+        let hexColor = "f0932b"
+        guard let color =  UIColor(fromHexCode: hexColor) else { fatalError("Should return a color of \(hexColor)") }
+        return color
+    }
+    static var spicedNectarine: UIColor {
+        let hexColor = "ffbe76"
+        guard let color =  UIColor(fromHexCode: hexColor) else { fatalError("Should return a color of \(hexColor)") }
+        return color
+    }
+    
+    static var pureApple: UIColor {
+        let hexColor = "6ab04c"
+        guard let color =  UIColor(fromHexCode: hexColor) else { fatalError("Should return a color of \(hexColor)") }
+        return color
+    }
+    static var juneBud: UIColor {
+        let hexColor = "badc58"
+        guard let color =  UIColor(fromHexCode: hexColor) else { fatalError("Should return a color of \(hexColor)") }
+        return color
+    }
+    
     static var black: UIColor {
         let hexColor = "000000"
         guard let color =  UIColor(fromHexCode: hexColor) else { fatalError("Should return a color of \(hexColor)") }
