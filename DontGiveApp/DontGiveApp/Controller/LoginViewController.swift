@@ -19,9 +19,13 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+
+        
     }
 
     @IBAction func signInAction(_ sender: Any) {
+        UserDefaults.standard.set(true, forKey: "status")
+        Switcher.updateRootVC()
     }
     
 

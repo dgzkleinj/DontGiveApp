@@ -11,9 +11,12 @@ import UIKit
 class ViewController: UIViewController {
     
     @IBOutlet weak var helloNameLabel: UILabel!
+    var userName: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        helloNameLabel.text = userName
     }
 
     @IBAction func sadAction(_ sender: UIButton) {

@@ -12,6 +12,9 @@
 		AA044B842338FFED00E708C4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA044B832338FFED00E708C4 /* LoginViewController.swift */; };
 		AA044B86233A489200E708C4 /* EmotionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA044B85233A489200E708C4 /* EmotionCollectionViewCell.swift */; };
 		AA044B88233BA6B600E708C4 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA044B87233BA6B600E708C4 /* Colors.swift */; };
+		AA044B8C233E384700E708C4 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA044B8B233E384700E708C4 /* TabBarViewController.swift */; };
+		AA044B8E233E39F500E708C4 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA044B8D233E39F500E708C4 /* ProfileViewController.swift */; };
+		AA044B92233E3AC800E708C4 /* Switcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA044B91233E3AC800E708C4 /* Switcher.swift */; };
 		AE0FEE502333B496000DFAA0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0FEE4F2333B496000DFAA0 /* AppDelegate.swift */; };
 		AE0FEE522333B496000DFAA0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0FEE512333B496000DFAA0 /* ViewController.swift */; };
 		AE0FEE552333B496000DFAA0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE0FEE532333B496000DFAA0 /* Main.storyboard */; };
@@ -46,6 +49,9 @@
 		AA044B832338FFED00E708C4 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		AA044B85233A489200E708C4 /* EmotionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionCollectionViewCell.swift; sourceTree = "<group>"; };
 		AA044B87233BA6B600E708C4 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		AA044B8B233E384700E708C4 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		AA044B8D233E39F500E708C4 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		AA044B91233E3AC800E708C4 /* Switcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Switcher.swift; sourceTree = "<group>"; };
 		AE0FEE4C2333B496000DFAA0 /* DontGiveApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DontGiveApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE0FEE4F2333B496000DFAA0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AE0FEE512333B496000DFAA0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -97,6 +103,8 @@
 				AA044B812338FD5000E708C4 /* EmotionsViewController.swift */,
 				AA044B832338FFED00E708C4 /* LoginViewController.swift */,
 				AA044B85233A489200E708C4 /* EmotionCollectionViewCell.swift */,
+				AA044B8B233E384700E708C4 /* TabBarViewController.swift */,
+				AA044B8D233E39F500E708C4 /* ProfileViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -115,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				AA044B792338EDD300E708C4 /* Journal.swift */,
+				AA044B91233E3AC800E708C4 /* Switcher.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -319,12 +328,15 @@
 			files = (
 				AA044B842338FFED00E708C4 /* LoginViewController.swift in Sources */,
 				AA044B88233BA6B600E708C4 /* Colors.swift in Sources */,
+				AA044B8E233E39F500E708C4 /* ProfileViewController.swift in Sources */,
 				AE0FEE582333B496000DFAA0 /* DontGiveApp.xcdatamodeld in Sources */,
 				AE0FEE522333B496000DFAA0 /* ViewController.swift in Sources */,
+				AA044B8C233E384700E708C4 /* TabBarViewController.swift in Sources */,
 				AA044B822338FD5000E708C4 /* EmotionsViewController.swift in Sources */,
 				AE0FEE502333B496000DFAA0 /* AppDelegate.swift in Sources */,
 				AA044B7A2338EDD300E708C4 /* Journal.swift in Sources */,
 				AA044B86233A489200E708C4 /* EmotionCollectionViewCell.swift in Sources */,
+				AA044B92233E3AC800E708C4 /* Switcher.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
