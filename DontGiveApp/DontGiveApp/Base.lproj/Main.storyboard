@@ -44,6 +44,13 @@
                                 <rect key="frame" x="88" y="106" width="239" height="181"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L6u-u7-zb9">
+                                <rect key="frame" x="180" y="613" width="54" height="30"/>
+                                <state key="normal" title="Sign Up"/>
+                                <connections>
+                                    <action selector="signUpAction:" destination="Qt0-CF-nMi" eventType="touchUpInside" id="7Tv-Ga-sbu"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JQF-8p-Gyl">
                                 <rect key="frame" x="100" y="553" width="214" height="30"/>
                                 <state key="normal" title="Sign in"/>
@@ -56,9 +63,12 @@
                         <constraints>
                             <constraint firstItem="NuS-sg-GnX" firstAttribute="centerX" secondItem="3fF-SB-eav" secondAttribute="centerX" id="2EZ-0T-e7w"/>
                             <constraint firstItem="1sl-Is-4Ih" firstAttribute="leading" secondItem="NuS-sg-GnX" secondAttribute="leading" id="3GM-eX-KSg"/>
+                            <constraint firstItem="L6u-u7-zb9" firstAttribute="top" secondItem="JQF-8p-Gyl" secondAttribute="bottom" constant="30" id="5HY-gy-d0N"/>
                             <constraint firstItem="JQF-8p-Gyl" firstAttribute="leading" secondItem="Wsh-sb-CR8" secondAttribute="leading" constant="100" id="B81-JL-gbR"/>
+                            <constraint firstItem="L6u-u7-zb9" firstAttribute="leading" secondItem="JQF-8p-Gyl" secondAttribute="trailing" constant="-134" id="IXV-AW-6fy"/>
                             <constraint firstItem="Wsh-sb-CR8" firstAttribute="trailing" secondItem="JQF-8p-Gyl" secondAttribute="trailing" constant="100" id="IeS-Fg-kay"/>
                             <constraint firstItem="NuS-sg-GnX" firstAttribute="centerY" secondItem="3fF-SB-eav" secondAttribute="centerY" id="bCh-g4-vOH"/>
+                            <constraint firstItem="L6u-u7-zb9" firstAttribute="height" secondItem="JQF-8p-Gyl" secondAttribute="height" id="hAc-a3-bv3"/>
                             <constraint firstItem="1sl-Is-4Ih" firstAttribute="top" secondItem="NuS-sg-GnX" secondAttribute="bottom" constant="30" id="oGO-Rc-oqH"/>
                             <constraint firstItem="1sl-Is-4Ih" firstAttribute="trailing" secondItem="NuS-sg-GnX" secondAttribute="trailing" id="ugR-VD-3L0"/>
                             <constraint firstItem="JQF-8p-Gyl" firstAttribute="top" secondItem="1sl-Is-4Ih" secondAttribute="bottom" constant="30" id="xkS-mJ-HMv"/>
@@ -114,15 +124,22 @@
                                     <action selector="neutralAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="n9f-ac-q8q"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Olá," textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JGX-wj-cjZ">
-                                <rect key="frame" x="192" y="156" width="31" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Olá," textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JGX-wj-cjZ">
+                                <rect key="frame" x="50" y="138" width="314" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="qNW-Fj-ot1"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="JGX-wj-cjZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="Qav-XG-Dy8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="JGX-wj-cjZ" secondAttribute="trailing" constant="50" id="Rpf-XU-4nU"/>
+                            <constraint firstItem="JGX-wj-cjZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="s4A-je-y1c"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="oPv-oO-7cy"/>

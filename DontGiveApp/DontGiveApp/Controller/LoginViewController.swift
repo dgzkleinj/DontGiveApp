@@ -19,14 +19,18 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-
-        
     }
 
     @IBAction func signInAction(_ sender: Any) {
         UserDefaults.standard.set(true, forKey: "status")
         Switcher.updateRootVC()
+        
     }
     
-
+    @IBAction func signUpAction(_ sender: UIButton) {
+        let defaults = UserDefaults.standard
+        let name = nameTextField.text ?? ""
+        defaults.set(name, forKey: "nameKey")
+    }
+    
 }

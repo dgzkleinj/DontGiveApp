@@ -16,7 +16,12 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        helloNameLabel.text = userName
+        let defaults = UserDefaults.standard
+        if let value = defaults.string(forKey: "nameKey") {
+            //let name = try! JSONDecoder().decode(String.self, from: value)
+            userName = value
+        }
+        helloNameLabel.text = "Olá, \(userName ?? "Forasteiro")"
     }
 
     @IBAction func sadAction(_ sender: UIButton) {
