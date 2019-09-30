@@ -23,6 +23,10 @@
 		AE0FEE5D2333B497000DFAA0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE0FEE5B2333B497000DFAA0 /* LaunchScreen.storyboard */; };
 		AE0FEE682333B497000DFAA0 /* DontGiveAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0FEE672333B497000DFAA0 /* DontGiveAppTests.swift */; };
 		AE0FEE732333B497000DFAA0 /* DontGiveAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0FEE722333B497000DFAA0 /* DontGiveAppUITests.swift */; };
+		AE43122B234232CA00154C1F /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE43122A234232CA00154C1F /* CalendarViewController.swift */; };
+		AE43122D2342334100154C1F /* MonthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE43122C2342334100154C1F /* MonthView.swift */; };
+		AE43122F2342338000154C1F /* WeekdaysView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE43122E2342338000154C1F /* WeekdaysView.swift */; };
+		AE431231234233E700154C1F /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE431230234233E700154C1F /* CalendarView.swift */; };
 		AED835DA2333C3C300A92E66 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AED835D92333C3C300A92E66 /* HealthKit.framework */; };
 /* End PBXBuildFile section */
 
@@ -66,6 +70,10 @@
 		AE0FEE6E2333B497000DFAA0 /* DontGiveAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DontGiveAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE0FEE722333B497000DFAA0 /* DontGiveAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DontGiveAppUITests.swift; sourceTree = "<group>"; };
 		AE0FEE742333B497000DFAA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AE43122A234232CA00154C1F /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		AE43122C2342334100154C1F /* MonthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthView.swift; sourceTree = "<group>"; };
+		AE43122E2342338000154C1F /* WeekdaysView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekdaysView.swift; sourceTree = "<group>"; };
+		AE431230234233E700154C1F /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		AED835D72333C3C300A92E66 /* DontGiveApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DontGiveApp.entitlements; sourceTree = "<group>"; };
 		AED835D92333C3C300A92E66 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -102,9 +110,13 @@
 				AE0FEE512333B496000DFAA0 /* ViewController.swift */,
 				AA044B812338FD5000E708C4 /* EmotionsViewController.swift */,
 				AA044B832338FFED00E708C4 /* LoginViewController.swift */,
+				AE43122A234232CA00154C1F /* CalendarViewController.swift */,
 				AA044B85233A489200E708C4 /* EmotionCollectionViewCell.swift */,
 				AA044B8B233E384700E708C4 /* TabBarViewController.swift */,
 				AA044B8D233E39F500E708C4 /* ProfileViewController.swift */,
+				AE43122C2342334100154C1F /* MonthView.swift */,
+				AE43122E2342338000154C1F /* WeekdaysView.swift */,
+				AE431230234233E700154C1F /* CalendarView.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -326,8 +338,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE43122D2342334100154C1F /* MonthView.swift in Sources */,
+				AE43122F2342338000154C1F /* WeekdaysView.swift in Sources */,
+				AE43122B234232CA00154C1F /* CalendarViewController.swift in Sources */,
 				AA044B842338FFED00E708C4 /* LoginViewController.swift in Sources */,
 				AA044B88233BA6B600E708C4 /* Colors.swift in Sources */,
+				AE431231234233E700154C1F /* CalendarView.swift in Sources */,
 				AA044B8E233E39F500E708C4 /* ProfileViewController.swift in Sources */,
 				AE0FEE582333B496000DFAA0 /* DontGiveApp.xcdatamodeld in Sources */,
 				AE0FEE522333B496000DFAA0 /* ViewController.swift in Sources */,

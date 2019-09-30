@@ -262,6 +262,7 @@
                 <tabBarController storyboardIdentifier="tabbarvc" automaticallyAdjustsScrollViewInsets="NO" id="DO9-5x-0aC" customClass="TabBarViewController" customModule="DontGiveApp" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Wbb-OB-EmV">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -303,10 +304,10 @@
             </objects>
             <point key="canvasLocation" x="1977" y="1679"/>
         </scene>
-        <!--View Controller-->
+        <!--CalendarViewController-->
         <scene sceneID="6Bk-mK-26u">
             <objects>
-                <viewController id="fXZ-63-A74" sceneMemberID="viewController">
+                <viewController title="CalendarViewController" id="fXZ-63-A74" customClass="CalendarViewController" customModule="DontGiveApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="91t-pk-cCH">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -338,10 +339,10 @@
             </objects>
             <point key="canvasLocation" x="996" y="1679"/>
         </scene>
-        <!--Calendar-->
+        <!--CalendarViewController-->
         <scene sceneID="zLW-VM-fhT">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="lAk-6c-0Yd" sceneMemberID="viewController">
+                <navigationController title="CalendarViewController" automaticallyAdjustsScrollViewInsets="NO" id="lAk-6c-0Yd" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Calendar" image="calendar" id="YFn-jE-KHx"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="P8l-xK-yNJ">

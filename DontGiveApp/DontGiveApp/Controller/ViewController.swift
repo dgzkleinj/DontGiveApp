@@ -21,7 +21,7 @@ class ViewController: UIViewController {
             //let name = try! JSONDecoder().decode(String.self, from: value)
             userName = value
         }
-        helloNameLabel.text = "Olá, \(userName ?? "Forasteiro")"
+       // helloNameLabel.text = "Olá, \(userName ?? "Forasteiro")"
         
     }
 
