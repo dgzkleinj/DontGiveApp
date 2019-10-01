@@ -50,6 +50,13 @@ class EmotionsViewController: UIViewController {
         
     }
     
+    @IBAction func callCVVButton(_ sender: Any) {
+        guard let number = URL(string: "tel://" + "188") else { return }
+        UIApplication.shared.open(number)
+    }
+    
+    
+    //Botao cria uma journal e coloca no array journals
     @IBAction func sendJournalAction(_ sender: UIButton) {
         let journalToSave = Journal(date: Date(), feeling: selectedFeeling!, emotions: selectedEmotions.joined(separator: ", "), journalText: journalTextView.text!)
         

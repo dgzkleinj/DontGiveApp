@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var nameTextField: UITextField!
     
@@ -18,7 +18,8 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        nameTextField.delegate = self
+        passwordTextField.delegate = self
     }
 
     @IBAction func signInAction(_ sender: Any) {
@@ -30,4 +31,8 @@ class LoginViewController: UIViewController {
         defaults.set(name, forKey: "nameKey")
     }
     
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return true
+    }
 }

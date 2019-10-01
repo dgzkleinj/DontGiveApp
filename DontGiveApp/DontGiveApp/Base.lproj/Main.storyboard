@@ -123,6 +123,14 @@
                                     <action selector="happyAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QIn-0D-WdO"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CqG-HK-HSf">
+                                <rect key="frame" x="278" y="724" width="136" height="89"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="CVV" image="CVV_-_logo_azul"/>
+                                <connections>
+                                    <action selector="callCVVButton:" destination="BJO-xD-a3f" eventType="touchUpInside" id="ETv-eV-eTj"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -139,6 +147,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="BJO-xD-a3f" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1976.8115942028987" y="144.64285714285714"/>
         </scene>
@@ -430,6 +439,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="CVV_-_logo_azul" width="1232" height="786.5"/>
         <image name="calendar" width="32" height="32"/>
         <image name="gold-ribbon-awareness-ribbon-alice-frenz-300" width="150" height="179"/>
         <image name="happy-ghost" width="128" height="128"/>
