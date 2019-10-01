@@ -56,13 +56,13 @@ class EmotionsViewController: UIViewController {
     }
     
     
-    //Botao cria uma journal e coloca no array journals
     @IBAction func sendJournalAction(_ sender: UIButton) {
         let journalToSave = Journal(date: Date(), feeling: selectedFeeling!, emotions: selectedEmotions.joined(separator: ", "), journalText: journalTextView.text!)
         
         coreDataManager.saveJournal(journalToSave)
         
         print(journalToSave)
+        
     }
     
     
