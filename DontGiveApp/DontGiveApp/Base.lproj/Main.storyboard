@@ -32,7 +32,7 @@
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1sl-Is-4Ih">
                                 <rect key="frame" x="82" y="493" width="250" height="30"/>
@@ -293,7 +293,7 @@
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5CW-Jp-pM7">
-                                <rect key="frame" x="0.0" y="88" width="414" height="445"/>
+                                <rect key="frame" x="0.0" y="98" width="414" height="435"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="JournalTableViewCell" rowHeight="133" id="1u5-pZ-UCL" customClass="JournalTableViewCell" customModule="DontGiveApp" customModuleProvider="target">
@@ -309,23 +309,23 @@
                                                         <constraint firstAttribute="width" constant="100" id="zTe-4y-nqN"/>
                                                     </constraints>
                                                 </imageView>
-                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="Vc3-gr-XaH">
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Vc3-gr-XaH">
                                                     <rect key="frame" x="100" y="11" width="294" height="111"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HuF-cG-y2j">
-                                                            <rect key="frame" x="0.0" y="0.0" width="294" height="14"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HuF-cG-y2j">
+                                                            <rect key="frame" x="0.0" y="0.0" width="294" height="33.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9dU-JB-6v7">
-                                                            <rect key="frame" x="0.0" y="42" width="294" height="20.5"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9dU-JB-6v7">
+                                                            <rect key="frame" x="0.0" y="38.5" width="294" height="34"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a7r-xk-bxh">
-                                                            <rect key="frame" x="0.0" y="90.5" width="294" height="20.5"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a7r-xk-bxh">
+                                                            <rect key="frame" x="0.0" y="77.5" width="294" height="33.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -360,7 +360,7 @@
                             <constraint firstItem="Ul5-Gq-7bb" firstAttribute="trailing" secondItem="5CW-Jp-pM7" secondAttribute="trailing" id="75E-a7-0XP"/>
                             <constraint firstItem="E6B-fG-pHE" firstAttribute="top" secondItem="5CW-Jp-pM7" secondAttribute="bottom" constant="200" id="Es3-ZN-kxk"/>
                             <constraint firstItem="5CW-Jp-pM7" firstAttribute="leading" secondItem="Ul5-Gq-7bb" secondAttribute="leading" id="TkI-d7-2HP"/>
-                            <constraint firstItem="5CW-Jp-pM7" firstAttribute="top" secondItem="Ul5-Gq-7bb" secondAttribute="top" id="dss-ze-goS"/>
+                            <constraint firstItem="5CW-Jp-pM7" firstAttribute="top" secondItem="Ul5-Gq-7bb" secondAttribute="top" constant="10" id="dss-ze-goS"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Ul5-Gq-7bb"/>
                     </view>

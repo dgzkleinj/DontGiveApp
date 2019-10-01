@@ -24,7 +24,7 @@ class ProfileViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         self.journals = coreDataManager.fetchJournal()
-
+        journalTableView.reloadData()
     }
     
     @IBAction func logoutAction(_ sender: UIButton) {
@@ -32,7 +32,6 @@ class ProfileViewController: UIViewController {
         Switcher.updateRootVC()
     }
     
- 
 }
 
 extension ProfileViewController : UITableViewDataSource, UITableViewDelegate {
@@ -46,6 +45,29 @@ extension ProfileViewController : UITableViewDataSource, UITableViewDelegate {
         }
         let journal = self.journals[indexPath.row]
         cell.feelingLabel.text = journal.feeling
+        cell.emotionsLabel.text = journal.emotions
+        cell.journalTextLabel.text = journal.journalText
+        if journal.feeling == "sad" {
+            cell.backgroundColor = Colors.middleBlue
+            cell.journalImageView.image = UIImage(named: "sad-face")
+            
+        }else if journal.feeling == "neutral" {
+            cell.backgroundColor = Colors.juneBud
+            cell.journalImageView.image = UIImage(named: "neutral-face")
+            
+        }else {
+            cell.backgroundColor = Colors.beekeper
+            cell.journalImageView.image = UIImage(named: "happy-face")
+            
+        }
+        cell.feelingLabel.layer.borderWidth = 1
+        cell.feelingLabel.layer.cornerRadius = cell.feelingLabel.frame.height / 2
+        cell.emotionsLabel.layer.borderWidth = 1
+        cell.emotionsLabel.layer.cornerRadius = cell.feelingLabel.frame.height / 2
+        cell.journalTextLabel.layer.borderWidth = 1
+        cell.journalTextLabel.layer.cornerRadius = cell.feelingLabel.frame.height / 2
+        cell.layer.borderWidth = 1
+        cell.layer.cornerRadius = 15
         
         return cell
     }

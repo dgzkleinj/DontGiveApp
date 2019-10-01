@@ -51,7 +51,7 @@ class EmotionsViewController: UIViewController {
     }
     
     @IBAction func sendJournalAction(_ sender: UIButton) {
-        let journalToSave = Journal(date: Date(), feeling: selectedFeeling!, emotions: selectedEmotions, journalText: journalTextView.text!)
+        let journalToSave = Journal(date: Date(), feeling: selectedFeeling!, emotions: selectedEmotions.joined(separator: ", "), journalText: journalTextView.text!)
         
         coreDataManager.saveJournal(journalToSave)
         
