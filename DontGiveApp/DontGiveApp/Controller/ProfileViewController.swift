@@ -7,11 +7,23 @@
 //
 
 import UIKit
+import CoreData
 
 class ProfileViewController: UIViewController {
 
+    @IBOutlet weak var journalTableView: UITableView!
+    
+    let coreDataManager = CoreDataManager()
+    var journals = [JournalData]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        journalTableView.dataSource = self
+        journalTableView.delegate = self
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.journals = coreDataManager.fetchJournal()
 
     }
     
@@ -21,4 +33,21 @@ class ProfileViewController: UIViewController {
     }
     
  
+}
+
+extension ProfileViewController : UITableViewDataSource, UITableViewDelegate {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.journals.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "JournalTableViewCell") as? JournalTableViewCell else{
+            fatalError("Deveria existir uma celula JournalTableViewCell")
+        }
+        let journal = self.journals[indexPath.row]
+        cell.feelingLabel.text = journal.feeling
+        
+        return cell
+    }
+    
 }

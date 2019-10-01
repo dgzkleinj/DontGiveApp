@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class EmotionsViewController: UIViewController {
 
@@ -17,6 +18,8 @@ class EmotionsViewController: UIViewController {
     var selectedFeeling: String?
     var emotions: [String] = []
     var selectedEmotions: [String] = []
+    var journals: [NSManagedObject] = []
+    let coreDataManager = CoreDataManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,12 +58,15 @@ class EmotionsViewController: UIViewController {
     
     //Botao cria uma journal e coloca no array journals
     @IBAction func sendJournalAction(_ sender: UIButton) {
-        let journal = Journal(date: Date(), feeling: selectedFeeling!, emotions: selectedEmotions, journalText: journalTextView.text!)
-        journals.append(journal)
-        print(journal)
+        let journalToSave = Journal(date: Date(), feeling: selectedFeeling!, emotions: selectedEmotions, journalText: journalTextView.text!)
+        
+        coreDataManager.saveJournal(journalToSave)
+        
+        print(journalToSave)
     }
+    
+    
 }
-
 
 extension EmotionsViewController : UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
