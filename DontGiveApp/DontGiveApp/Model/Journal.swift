@@ -7,7 +7,7 @@
 //
 
 import Foundation
-
+import CoreData
 
 struct Journal {
     var date: Date!
@@ -16,7 +16,7 @@ struct Journal {
     var journalText: String
 }
 
-var journals: [Journal] = []
+var journals: [JournalData] = []
 
 let happyEmotions = ["Hopeful", "Joyful", "Satisfied", "Confident", "Excited", "Relieved"]
 let neutralEmotions = ["Relieved", "Satisfied", "Apathic", "Detached", "Mellow"]

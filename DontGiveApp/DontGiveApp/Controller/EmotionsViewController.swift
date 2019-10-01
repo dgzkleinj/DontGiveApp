@@ -19,6 +19,7 @@ class EmotionsViewController: UIViewController {
     var emotions: [String] = []
     var selectedEmotions: [String] = []
     var journals: [NSManagedObject] = []
+    let coreDataManager = CoreDataManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,42 +50,16 @@ class EmotionsViewController: UIViewController {
         
     }
     
-    //Botao cria uma journal e coloca no array journals
     @IBAction func sendJournalAction(_ sender: UIButton) {
         let journalToSave = Journal(date: Date(), feeling: selectedFeeling!, emotions: selectedEmotions, journalText: journalTextView.text!)
         
-        self.saveJournal(journalToSave)
+        coreDataManager.saveJournal(journalToSave)
         
         print(journalToSave)
     }
     
-    func saveJournal(_ journal: Journal) {
-        guard let appDelegate =
-            UIApplication.shared.delegate as? AppDelegate else {
-                return
-        }
-        
-        let context = appDelegate.persistentContainer.viewContext
-        
-        let entity = NSEntityDescription.entity(forEntityName: "JournalData", in: context)!
-        
-        let newJournal = NSManagedObject(entity: entity, insertInto: context)
-        
-        newJournal.setValue(journal.date, forKey: "date")
-        newJournal.setValue(journal.emotions, forKey: "emotions")
-        newJournal.setValue(journal.feeling, forKey: "feeling")
-        newJournal.setValue(journal.journalText, forKey: "journalText")
-            
-        do {
-            try context.save()
-            journals.append(newJournal)
-            print("Success")
-        } catch {
-            print("Error saving: \(error)")
-        }
-    }
+    
 }
-
 
 extension EmotionsViewController : UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
