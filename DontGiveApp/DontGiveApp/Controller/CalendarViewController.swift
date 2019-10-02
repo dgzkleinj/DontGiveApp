@@ -16,9 +16,9 @@ enum MyTheme {
 
 class CalendarViewController: UIViewController {
     
-    
+    var colorCal: Colors!
     var theme = MyTheme.light
-    
+    var text: String! = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,6 +35,19 @@ class CalendarViewController: UIViewController {
 //        let rightBarBtn = UIBarButtonItem(title: "Light", style: .plain, target: self, action: #selector(rightBarBtnAction))
 //        self.navigationItem.rightBarButtonItem = rightBarBtn
     }
+    
+//    func choosingCalendarButtonColor(_ text: String) -> Colors {
+//        if(text == "sad"){
+//            let colorCal = Colors.hintOfIcePack
+//        }
+//        else if(text == "neutral"){
+//            let colorCal = Colors.juneBud
+//        }
+//        else{
+//            let colorCal = Colors.pinkGlamour
+//        }
+//        return colorCal: Colors
+//    }
     
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()

@@ -20,6 +20,8 @@ class EmotionsViewController: UIViewController, UITextViewDelegate {
     var selectedEmotions: [String] = []
     var journals: [NSManagedObject] = []
     let coreDataManager = CoreDataManager()
+    let vc = CalendarViewController()
+//    var text: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,14 +42,17 @@ class EmotionsViewController: UIViewController, UITextViewDelegate {
             view.backgroundColor = Colors.middleBlue
             sendButton.backgroundColor = Colors.hintOfIcePack
             emotions = sadEmotions
+            vc.text = "sad"
         }else if selectedFeeling == "neutral" {
             view.backgroundColor = Colors.juneBud
             sendButton.backgroundColor = Colors.greenlandGreen
             emotions = neutralEmotions
+            vc.text = "neutral"
         }else {
             view.backgroundColor = Colors.pinkGlamour
             sendButton.backgroundColor = Colors.turbo
             emotions = happyEmotions
+            vc.text = "happy"
         }
         
     }
