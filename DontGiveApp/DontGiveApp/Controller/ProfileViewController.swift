@@ -11,10 +11,12 @@ import CoreData
 
 class ProfileViewController: UIViewController {
 
+    @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var journalTableView: UITableView!
     
     let coreDataManager = CoreDataManager()
     var journals = [JournalData]()
+    var name: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +25,12 @@ class ProfileViewController: UIViewController {
         
         journalTableView.dataSource = self
         journalTableView.delegate = self
+        
+        let defaults = UserDefaults.standard
+        if let value = defaults.string(forKey: "nameKey") {
+            name = value
+        }
+        nameLabel?.text = "Nome:  \(name)"
     }
     
     override func viewWillAppear(_ animated: Bool) {
