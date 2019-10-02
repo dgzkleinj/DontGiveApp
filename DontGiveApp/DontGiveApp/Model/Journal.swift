@@ -12,7 +12,7 @@ import CoreData
 struct Journal {
     var date: Date!
     var feeling: String
-    var emotions: [String]
+    var emotions: String
     var journalText: String
 }
 

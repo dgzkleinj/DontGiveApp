@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    @IBOutlet weak var helloNameLabel: UILabel!
+    @IBOutlet weak var nameLabel: UILabel?
     var userName: String?
     
     override func viewDidLoad() {
@@ -21,7 +21,7 @@ class ViewController: UIViewController {
             //let name = try! JSONDecoder().decode(String.self, from: value)
             userName = value
         }
-//       helloNameLabel.text = "Olá, \(userName ?? "Forasteiro")"
+        nameLabel?.text = "Olá, \(userName ?? "Forasteiro")"
     }
 
     @IBAction func sadAction(_ sender: UIButton) {

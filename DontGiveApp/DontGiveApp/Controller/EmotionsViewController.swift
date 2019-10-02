@@ -58,13 +58,14 @@ class EmotionsViewController: UIViewController, UITextViewDelegate {
     }
     
     
-    //Botao cria uma journal e coloca no array journals
     @IBAction func sendJournalAction(_ sender: UIButton) {
-        let journalToSave = Journal(date: Date(), feeling: selectedFeeling!, emotions: selectedEmotions, journalText: journalTextView.text!)
+        let journalToSave = Journal(date: Date(), feeling: selectedFeeling!, emotions: selectedEmotions.joined(separator: ", "), journalText: journalTextView.text!)
         
         coreDataManager.saveJournal(journalToSave)
         
         print(journalToSave)
+        navigationController?.popViewController(animated: true)
+        
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
