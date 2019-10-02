@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-class EmotionsViewController: UIViewController {
+class EmotionsViewController: UIViewController, UITextViewDelegate {
 
     @IBOutlet weak var emotionCollectionView: UICollectionView!
     @IBOutlet weak var journalTextView: UITextView!
@@ -23,6 +23,8 @@ class EmotionsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        journalTextView.delegate = self
         
         emotionCollectionView.delegate = self
         emotionCollectionView.dataSource = self
@@ -63,6 +65,11 @@ class EmotionsViewController: UIViewController {
         coreDataManager.saveJournal(journalToSave)
         
         print(journalToSave)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return true
     }
     
     
@@ -125,3 +132,4 @@ extension EmotionsViewController : UICollectionViewDelegate, UICollectionViewDat
         return UIEdgeInsets(top: 10, left: 40, bottom: 0, right: 40)
     }
 }
+
