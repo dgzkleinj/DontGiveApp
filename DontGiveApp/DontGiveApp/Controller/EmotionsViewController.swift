@@ -62,6 +62,7 @@ class EmotionsViewController: UIViewController {
         coreDataManager.saveJournal(journalToSave)
         
         print(journalToSave)
+        navigationController?.popViewController(animated: true)
         
     }
     

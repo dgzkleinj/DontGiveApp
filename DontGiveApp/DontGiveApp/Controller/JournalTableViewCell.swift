@@ -15,6 +15,7 @@ class JournalTableViewCell: UITableViewCell {
     @IBOutlet weak var emotionsLabel: UILabel!
     @IBOutlet weak var feelingLabel: UILabel!
     @IBOutlet weak var journalTextLabel: UILabel!
+    @IBOutlet weak var dateLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
