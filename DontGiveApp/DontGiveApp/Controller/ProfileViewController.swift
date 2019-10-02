@@ -18,6 +18,9 @@ class ProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.title = "Profile"
+        
         journalTableView.dataSource = self
         journalTableView.delegate = self
     }
@@ -58,15 +61,15 @@ extension ProfileViewController : UITableViewDataSource, UITableViewDelegate {
         cell.emotionsLabel.text = journal.emotions
         cell.journalTextLabel.text = journal.journalText
         if journal.feeling == "sad" {
-            cell.backgroundColor = Colors.middleBlue
+            cell.backgroundColorView.backgroundColor = Colors.middleBlue
             cell.journalImageView.image = UIImage(named: "sad-face-2")
             cell.feelingLabel.text = "Sad"
         }else if journal.feeling == "neutral" {
-            cell.backgroundColor = Colors.juneBud
+            cell.backgroundColorView.backgroundColor  = Colors.juneBud
             cell.journalImageView.image = UIImage(named: "neutral-face-2")
             cell.feelingLabel.text = "Neutral"
         }else {
-            cell.backgroundColor = Colors.pinkGlamour
+            cell.backgroundColorView.backgroundColor  = Colors.pinkGlamour
             cell.journalImageView.image = UIImage(named: "happy-face-2")
             cell.feelingLabel.text = "Happy"
         }
@@ -78,8 +81,8 @@ extension ProfileViewController : UITableViewDataSource, UITableViewDelegate {
         cell.emotionsLabel.layer.cornerRadius = cell.feelingLabel.frame.height / 2
         cell.journalTextLabel.layer.borderWidth = 1
         cell.journalTextLabel.layer.cornerRadius = cell.feelingLabel.frame.height / 2
-        cell.layer.borderWidth = 1
-        cell.layer.cornerRadius = 15
+        cell.backgroundColorView.layer.borderWidth = 1
+        cell.backgroundColorView.layer.cornerRadius = 15
         
         return cell
     }

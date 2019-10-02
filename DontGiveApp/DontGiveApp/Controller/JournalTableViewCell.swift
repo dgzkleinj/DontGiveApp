@@ -17,15 +17,7 @@ class JournalTableViewCell: UITableViewCell {
     @IBOutlet weak var journalTextLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
+    @IBOutlet weak var backgroundColorView: UIView!
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
 
 }
