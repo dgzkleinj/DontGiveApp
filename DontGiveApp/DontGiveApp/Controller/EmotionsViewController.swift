@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-class EmotionsViewController: UIViewController {
+class EmotionsViewController: UIViewController, UITextViewDelegate {
 
     @IBOutlet weak var emotionCollectionView: UICollectionView!
     @IBOutlet weak var journalTextView: UITextView!
@@ -20,9 +20,13 @@ class EmotionsViewController: UIViewController {
     var selectedEmotions: [String] = []
     var journals: [NSManagedObject] = []
     let coreDataManager = CoreDataManager()
+    let vc = CalendarViewController()
+//    var text: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        journalTextView.delegate = self
         
         emotionCollectionView.delegate = self
         emotionCollectionView.dataSource = self
@@ -38,14 +42,17 @@ class EmotionsViewController: UIViewController {
             view.backgroundColor = Colors.middleBlue
             sendButton.backgroundColor = Colors.hintOfIcePack
             emotions = sadEmotions
+            vc.text = "sad"
         }else if selectedFeeling == "neutral" {
             view.backgroundColor = Colors.juneBud
             sendButton.backgroundColor = Colors.greenlandGreen
             emotions = neutralEmotions
+            vc.text = "neutral"
         }else {
             view.backgroundColor = Colors.pinkGlamour
             sendButton.backgroundColor = Colors.turbo
             emotions = happyEmotions
+            vc.text = "happy"
         }
         
     }
@@ -64,6 +71,11 @@ class EmotionsViewController: UIViewController {
         print(journalToSave)
         navigationController?.popViewController(animated: true)
         
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return true
     }
     
     
@@ -126,3 +138,4 @@ extension EmotionsViewController : UICollectionViewDelegate, UICollectionViewDat
         return UIEdgeInsets(top: 10, left: 40, bottom: 0, right: 40)
     }
 }
+

@@ -16,9 +16,9 @@ enum MyTheme {
 
 class CalendarViewController: UIViewController {
     
-    
-    var theme = MyTheme.dark
-    
+    var colorCal: Colors!
+    var theme = MyTheme.light
+    var text: String! = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,31 +32,44 @@ class CalendarViewController: UIViewController {
         calenderView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 12).isActive=true
         calenderView.heightAnchor.constraint(equalToConstant: 365).isActive=true
         
-        let rightBarBtn = UIBarButtonItem(title: "Light", style: .plain, target: self, action: #selector(rightBarBtnAction))
-        self.navigationItem.rightBarButtonItem = rightBarBtn
+//        let rightBarBtn = UIBarButtonItem(title: "Light", style: .plain, target: self, action: #selector(rightBarBtnAction))
+//        self.navigationItem.rightBarButtonItem = rightBarBtn
     }
+    
+//    func choosingCalendarButtonColor(_ text: String) -> Colors {
+//        if(text == "sad"){
+//            let colorCal = Colors.hintOfIcePack
+//        }
+//        else if(text == "neutral"){
+//            let colorCal = Colors.juneBud
+//        }
+//        else{
+//            let colorCal = Colors.pinkGlamour
+//        }
+//        return colorCal: Colors
+//    }
     
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
         calenderView.myCollectionView.collectionViewLayout.invalidateLayout()
     }
     
-    @objc func rightBarBtnAction(sender: UIBarButtonItem) {
-        if theme == .dark {
-            sender.title = "Dark"
-            theme = .light
-            Style.themeLight()
-        } else {
-            sender.title = "Light"
-            theme = .dark
-            Style.themeDark()
-        }
-        self.view.backgroundColor=Style.bgColor
-        calenderView.changeTheme()
-    }
+//    @objc func rightBarBtnAction(sender: UIBarButtonItem) {
+//        if theme == .dark {
+//            sender.title = "Dark"
+//            theme = .light
+//            Style.themeLight()
+//        } else {
+//            sender.title = "Light"
+//            theme = .dark
+//            Style.themeDark() 
+//        }
+//        self.view.backgroundColor=Style.bgColor
+//        calenderView.changeTheme()
+//    }
     
     let calenderView: CalenderView = {
-        let v=CalenderView(theme: MyTheme.dark)
+        let v=CalenderView(theme: MyTheme.light)
         v.translatesAutoresizingMaskIntoConstraints=false
         return v
     }()
