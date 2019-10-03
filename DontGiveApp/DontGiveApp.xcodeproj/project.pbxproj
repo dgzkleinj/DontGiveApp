@@ -537,13 +537,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = DontGiveApp/DontGiveApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4ZZ8344Y55;
+				DEVELOPMENT_TEAM = X6DM5M5VVY;
 				INFOPLIST_FILE = "$(SRCROOT)/DontGiveApp/Support/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = not.DontGiveApp;
+				PRODUCT_BUNDLE_IDENTIFIER = not.DontGiveApp2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -556,13 +556,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = DontGiveApp/DontGiveApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4ZZ8344Y55;
+				DEVELOPMENT_TEAM = X6DM5M5VVY;
 				INFOPLIST_FILE = "$(SRCROOT)/DontGiveApp/Support/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = not.DontGiveApp;
+				PRODUCT_BUNDLE_IDENTIFIER = not.DontGiveApp2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

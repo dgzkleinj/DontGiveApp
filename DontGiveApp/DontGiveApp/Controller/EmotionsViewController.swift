@@ -31,6 +31,8 @@ class EmotionsViewController: UIViewController, UITextViewDelegate {
         emotionCollectionView.delegate = self
         emotionCollectionView.dataSource = self
         
+        self.title = "Emoções"
+        
         sendButton.layer.borderWidth = 1
         sendButton.layer.cornerRadius = sendButton.frame.height / 2
         
@@ -135,7 +137,7 @@ extension EmotionsViewController : UICollectionViewDelegate, UICollectionViewDat
 //        let leftInset = (collectionView.layer.frame.size.width - CGFloat(totalCellWidth + totalSpacingWidth)) / 2
 //        let rightInset = leftInset
         
-        return UIEdgeInsets(top: 10, left: 40, bottom: 0, right: 40)
+        return UIEdgeInsets(top: 10, left: 20, bottom: 0, right: 20)
     }
 }
 

@@ -13,6 +13,9 @@ class ProfileViewController: UIViewController {
 
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var journalTableView: UITableView!
+    @IBOutlet weak var profileInformationView: UIView!
+    @IBOutlet weak var tableTitleView: UIView!
+    @IBOutlet weak var logOutButton: UIButton!
     
     let coreDataManager = CoreDataManager()
     var journals = [JournalData]()
@@ -21,7 +24,7 @@ class ProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.title = "Profile"
+        self.title = "Perfil"
         
         journalTableView.dataSource = self
         journalTableView.delegate = self
@@ -31,6 +34,17 @@ class ProfileViewController: UIViewController {
             name = value
         }
         nameLabel?.text = "Nome:  \(name)"
+        
+        profileInformationView.layer.borderWidth = 1
+        profileInformationView.layer.cornerRadius = 10
+        profileInformationView.backgroundColor  = Colors.soaringEagle
+
+        tableTitleView.layer.borderWidth = 1
+        tableTitleView.layer.cornerRadius = tableTitleView.frame.height / 3
+        tableTitleView.backgroundColor  = Colors.soaringEagle
+        
+        logOutButton.layer.cornerRadius = logOutButton.frame.height / 2
+        logOutButton.backgroundColor = Colors.soaringEagle
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -71,15 +85,15 @@ extension ProfileViewController : UITableViewDataSource, UITableViewDelegate {
         if journal.feeling == "sad" {
             cell.backgroundColorView.backgroundColor = Colors.middleBlue
             cell.journalImageView.image = UIImage(named: "sad-face-2")
-            cell.feelingLabel.text = "Sad"
+            cell.feelingLabel.text = "Triste"
         }else if journal.feeling == "neutral" {
             cell.backgroundColorView.backgroundColor  = Colors.juneBud
             cell.journalImageView.image = UIImage(named: "neutral-face-2")
-            cell.feelingLabel.text = "Neutral"
+            cell.feelingLabel.text = "Neutro"
         }else {
             cell.backgroundColorView.backgroundColor  = Colors.pinkGlamour
             cell.journalImageView.image = UIImage(named: "happy-face-2")
-            cell.feelingLabel.text = "Happy"
+            cell.feelingLabel.text = "Feliz"
         }
         cell.dateLabel.layer.borderWidth = 1
         cell.dateLabel.layer.cornerRadius = cell.feelingLabel.frame.height / 2

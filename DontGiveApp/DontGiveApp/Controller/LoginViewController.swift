@@ -11,15 +11,16 @@ import UIKit
 class LoginViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var nameTextField: UITextField!
-    
     @IBOutlet weak var passwordTextField: UITextField!
-    
     @IBOutlet weak var signInButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         nameTextField.delegate = self
         passwordTextField.delegate = self
+        
+        signInButton.layer.cornerRadius = signInButton.frame.height / 2
+        signInButton.backgroundColor = Colors.turbo
     }
 
     @IBAction func signInAction(_ sender: Any) {

@@ -18,6 +18,6 @@ struct Journal {
 
 var journals: [JournalData] = []
 
-let happyEmotions = ["Hopeful", "Joyful", "Satisfied", "Confident", "Excited", "Relieved"]
-let neutralEmotions = ["Relieved", "Satisfied", "Apathic", "Detached", "Mellow"]
-let sadEmotions = ["Afraid", "Angry", "Lonely", "Depressed", "Melancholic", "Stressed", "Guilt"]
+let happyEmotions = ["Esperançoso", "Alegre", "Satisfeito", "Confiante", "Entusiasmado", "Grato", "Motivado", "Corajoso"]
+let neutralEmotions = ["Aliviado", "Apático", "Desconectado", "Consciente", "Satisfeito", "Receoso"]
+let sadEmotions = ["Com medo", "Com raiva", "Solitário", "Deprimido", "Melancólico", "Estressado", "Culpado", "Decepcionado"]

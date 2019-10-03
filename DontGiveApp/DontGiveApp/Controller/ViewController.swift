@@ -18,10 +18,10 @@ class ViewController: UIViewController {
         
         let defaults = UserDefaults.standard
         if let value = defaults.string(forKey: "nameKey") {
-            //let name = try! JSONDecoder().decode(String.self, from: value)
             userName = value
         }
         nameLabel?.text = "Olá, \(userName ?? "Forasteiro")"
+        self.title = "Sentimento"
     }
 
     @IBAction func sadAction(_ sender: UIButton) {
